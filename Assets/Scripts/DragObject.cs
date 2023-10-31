@@ -6,8 +6,13 @@ public class DragObject : MonoBehaviour
 
     private float _zCoord;
 
-    [SerializeField]
-    private Vector2 _Ypos = new Vector2(0.5f, 0.15f);
+    private bool _picked = false;
+
+    [SerializeField, Range(0.0f, 1.0f), Tooltip("The smaller, the smoother")]
+    private float _lerpInterval = 0.1f;
+
+    [SerializeField, Tooltip("X: height when object has been piked \nY: height when object has been drop")]
+    private Vector2 _Ypos = new(0.5f, 0.15f);
 
     private void OnMouseDown()
     {
@@ -16,11 +21,13 @@ public class DragObject : MonoBehaviour
         _zCoord = Camera.main.WorldToScreenPoint(transform.position).z;
 
         _offset = transform.position - GetMouseWorldPos();
+
+        _picked = true;
     }
 
     private void OnMouseUp()
     {
-        transform.position = new(transform.position.x, _Ypos.y, transform.position.z);
+        _picked = false;
     }
 
     private Vector3 GetMouseWorldPos()
@@ -32,8 +39,14 @@ public class DragObject : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
 
-    private void OnMouseDrag()
+    private void Update()
     {
-        transform.position = GetMouseWorldPos() + _offset;
+        if (_picked)
+            transform.position = Vector3.Lerp(transform.position, GetMouseWorldPos() + _offset, _lerpInterval);
+        else
+        {
+            transform.position = Vector3.Lerp(transform.position,
+                new(transform.position.x, _Ypos.y, transform.position.z), _lerpInterval * 0.5f);
+        }
     }
 }
