@@ -1,44 +1,56 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
-    [SerializeField]
-    float currentTime = 0;
-    bool isPaused = false;
-    
+    // Callback definitions
+    public delegate void OnValueChange(float value);
+    public delegate void OnTimeOut();
+
+    // variables
+    [SerializeField, Tooltip("In seconds")]
+    private float _maxTime = 180;
+    private float _currentTime = 0.0f;
+    private bool _isPlaying = true;
+
+    // attributes
+    public bool IsPlaying { get => _isPlaying; set => _isPlaying = value; }
+
+    // CallBacks
+    public OnValueChange onValueChange;
+    public OnTimeOut onTimeOut;
+
+    private void Start()
+    {
+        onTimeOut += TimeOut;
+    }
+
     private void Update()
     {
-        if (isPaused)
+        if (!_isPlaying)
             return;
 
-        currentTime += Time.deltaTime;
+        _currentTime += Time.deltaTime;
+
+        onValueChange.Invoke(1);
+
+        if (_currentTime >= _maxTime) 
+            onTimeOut.Invoke();
     }
 
     public void ResetTime()
     {
-        currentTime = 0;
+        _currentTime = 0;
     }
 
     // Current time in Seconds
     public int GetTime()
     {
-        return (int)(currentTime * 0.001f);
+        return (int)(_currentTime * 0.001f);
     }
 
-    public void Pause()
+    private void TimeOut()
     {
-        isPaused = true;
-    }
-
-    public void Resume()
-    {
-        isPaused = false;
-    }
-
-    public bool IsPaused()
-    {
-        return isPaused;
+        IsPlaying = false;
+        ResetTime();
     }
 }
