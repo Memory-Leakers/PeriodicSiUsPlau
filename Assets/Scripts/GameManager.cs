@@ -6,17 +6,25 @@ public class GameManager : MonoBehaviour
 {
     ScoreManager score;
 
-    // Current number of news in news pool
-    public int maxNews = 10;
+    // Current number of news in a game
+    public int newsPerGame = 10;
 
 
     int currentNews = 0;
     [SerializeField]
     List<int> unusedNews;
 
+    UnlockedNewsManager newsManager;
+
     private void Awake()
     {
+        newsManager = FindObjectOfType<UnlockedNewsManager>();
         score = FindObjectOfType<ScoreManager>();
+    }
+
+    private void Start()
+    {
+        // Done on Start instead of Awake becouse we need UnlockedNewsManager awake to happen before this.
         ResetUnusedNews();
     }
 
@@ -35,21 +43,7 @@ public class GameManager : MonoBehaviour
 
     void ResetUnusedNews()
     {
-        currentNews = 0;
-        unusedNews.Clear();
-        unusedNews = new List<int>(new int[maxNews]);
-        for (int i = 0; i < maxNews; ++i)
-        {
-            unusedNews[i] = i;
-        }
-
-        for (int i = 0; i < maxNews; ++i)
-        {
-            int randomNum = Random.Range(0, maxNews);
-            int temp = unusedNews[i];
-            unusedNews[i] = unusedNews[randomNum];
-            unusedNews[randomNum] = temp;
-        }
+        unusedNews = newsManager.GetGameNews(newsPerGame);
     }
 
 }

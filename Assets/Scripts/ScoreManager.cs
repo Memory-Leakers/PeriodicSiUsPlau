@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    float currentMultiplier = 1.0f;
+    int currentMultiplier = 1;
 
     [SerializeField]
     int currentScore = 0;
@@ -16,12 +16,12 @@ public class ScoreManager : MonoBehaviour
     // If score = 0, multiplier drops to 0. Else, multiplier +1
     public void AddScore(int score)
     {
-        currentScore += (int)(score * currentMultiplier);
+        currentScore += score * currentMultiplier;
 
         if (score == 0)
-            currentMultiplier = 1.0f;
+            currentMultiplier =1;
         else
-            currentMultiplier += 0.5f;
+            currentMultiplier += 1;
 
         if (OnUpdateScore != null)
             OnUpdateScore(currentScore);

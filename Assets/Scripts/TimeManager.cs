@@ -31,9 +31,10 @@ public class TimeManager : MonoBehaviour
 
         _currentTime += Time.deltaTime;
 
-        onValueChange.Invoke(1);
+        if (onValueChange != null)
+            onValueChange.Invoke(1);
 
-        if (_currentTime >= _maxTime) 
+        if (_currentTime >= _maxTime && onTimeOut != null) 
             onTimeOut.Invoke();
     }
 
