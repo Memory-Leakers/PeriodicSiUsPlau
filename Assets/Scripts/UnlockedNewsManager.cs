@@ -24,7 +24,13 @@ public class UnlockedNewsManager : MonoBehaviour
 
     public void UnlockNews(List<int> addedNews)
     {
-        unlockedIDs.AddRange(addedNews);
+        for (int i = 0; i < addedNews.Count; ++i)
+        {
+            // Make sure we are not duplicating IDs in UnlockedIDs.
+            if (unlockedIDs.Contains(addedNews[i]))
+                continue;
+            unlockedIDs.Add(addedNews[i]);
+        }
     }
 
     public List<int> GetGameNews(int amount)

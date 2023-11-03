@@ -10,11 +10,13 @@ public class GameManager : MonoBehaviour
     public int newsPerGame = 10;
 
 
-    int currentNews = 0;
+    int currentNewsIndex = 0;
     [SerializeField]
     List<int> unusedNews;
 
     UnlockedNewsManager newsManager;
+
+    NewsReader.NewsInfo currentNewsInfo;
 
     private void Awake()
     {
@@ -28,12 +30,28 @@ public class GameManager : MonoBehaviour
         ResetUnusedNews();
     }
 
-    // TODO: Change to return NewsInfo when created
-    public void NextNews()
+    /// <summary>
+    /// Returns next news NewsInfo. Needs to know if the current news was answered correctly or not. If this is the first news, so no previous news was loaded, correctAnswer should be always false.
+    /// </summary>
+    /// <param name="rightAnswer"></param>
+    /// <returns></returns>
+    public NewsReader.NewsInfo NextNews(bool correctAnswer = false)
     {
-        // Do the process of selecting the next news.
+        // If good response
+        if (correctAnswer)
+        {
+            newsManager.RemoveNews(currentNewsInfo.id); // remove from main pool this news because it was correct.
 
-        ++currentNews;
+            // unlock news for getting this news right.
+            List<int> unlockedNews = new List<int>(currentNewsInfo.indexActivated);
+            if (unlockedNews.Count != 0)
+                newsManager.UnlockNews(unlockedNews);
+        }
+
+        // Do the process of selecting the next news.
+        currentNewsInfo = NewsReader.LoadNews(unusedNews[++currentNewsIndex]);
+
+        return currentNewsInfo;
     }
     
     public void AddScore(int num)
