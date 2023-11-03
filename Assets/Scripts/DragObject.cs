@@ -14,8 +14,13 @@ public class DragObject : MonoBehaviour
     [SerializeField, Tooltip("X: height when object has been piked \nY: height when object has been drop")]
     private Vector2 _Ypos = new(0.5f, 0.15f);
 
+    private bool _interactible = true;
+
     private void OnMouseDown()
     {
+        if (!_interactible)
+            return;
+
         transform.position = new(transform.position.x, _Ypos.x, transform.position.z);
 
         _zCoord = Camera.main.WorldToScreenPoint(transform.position).z;
