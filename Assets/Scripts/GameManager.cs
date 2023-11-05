@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
     {
         // Done on Start instead of Awake becouse we need UnlockedNewsManager awake to happen before this.
         ResetUnusedNews();
+        // DEBUG-------------------------------
+        NextNews(false);
+
     }
 
     /// <summary>
@@ -40,6 +43,7 @@ public class GameManager : MonoBehaviour
         // If good response
         if (correctAnswer)
         {
+            Debug.Log("Removing ID: " + currentNewsInfo.id);
             newsManager.RemoveNews(currentNewsInfo.id); // remove from main pool this news because it was correct.
 
             // unlock news for getting this news right.
@@ -49,8 +53,13 @@ public class GameManager : MonoBehaviour
         }
 
         // Do the process of selecting the next news.
-        currentNewsInfo = NewsReader.LoadNews(unusedNews[++currentNewsIndex]);
+        //currentNewsInfo = NewsReader.LoadNews(unusedNews[++currentNewsIndex]);
+        // DEBUG------------------------------------------------------------
+        currentNewsInfo = new NewsReader.NewsInfo();
+        currentNewsInfo.indexActivated = new int[3] { Random.Range(31,100), Random.Range(31, 100), Random.Range(31, 100) };
+        currentNewsInfo.id = unusedNews[currentNewsIndex++];
 
+        // ---------------------------------------------------------------
         return currentNewsInfo;
     }
     
@@ -64,4 +73,15 @@ public class GameManager : MonoBehaviour
         unusedNews = newsManager.GetGameNews(newsPerGame);
     }
 
+    [ContextMenu("Correct")]
+    void CorrectNews()
+    {
+        NextNews(true);
+    }
+
+    [ContextMenu("Incorrect")]
+    void InCorrectNews()
+    {
+        NextNews(false);
+    }
 }

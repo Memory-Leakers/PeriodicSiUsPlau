@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 197315806}
   - component: {fileID: 197315805}
   - component: {fileID: 197315804}
+  - component: {fileID: 197315808}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -154,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2318a6549b190014daed3df995fc479d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTime: 0
+  _maxTime: 180
 --- !u!114 &197315805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed40f7aee0b408439681c3d83803920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxNews: 10
+  newsPerGame: 10
   unusedNews: 
 --- !u!4 &197315807
 Transform:
@@ -197,6 +198,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &197315808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197315803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcbc098b724303b4c83dc3eae4d1e41c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstNews: 30
 --- !u!1 &854099444
 GameObject:
   m_ObjectHideFlags: 0

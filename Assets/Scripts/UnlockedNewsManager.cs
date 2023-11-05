@@ -22,6 +22,31 @@ public class UnlockedNewsManager : MonoBehaviour
         ResetMainPool();
     }
 
+    //DEBUG CODE-------------------
+    
+    [ContextMenu("PrintUnlocked")]
+    void PrintUnlockedIDs()
+    {
+        string ids = "";
+        foreach (var id in unlockedIDs)
+            ids += id.ToString() + " ";
+
+        Debug.Log("UnlockedIDs: " + ids + "\n Total Count: " + unlockedIDs.Count);
+    }
+
+    [ContextMenu("PrintMain")]
+    void PrintMainPool()
+    {
+        string ids = "";
+        foreach (var id in mainPool)
+            ids += id.ToString() + " ";
+
+        Debug.Log("MainPool: " + ids + "\n Total Count: " + mainPool.Count);
+    }
+
+    //---------------------------------------------------
+
+
     public void UnlockNews(List<int> addedNews)
     {
         for (int i = 0; i < addedNews.Count; ++i)
@@ -30,6 +55,7 @@ public class UnlockedNewsManager : MonoBehaviour
             if (unlockedIDs.Contains(addedNews[i]))
                 continue;
             unlockedIDs.Add(addedNews[i]);
+            mainPool.Add(addedNews[i]);
         }
     }
 
@@ -67,6 +93,7 @@ public class UnlockedNewsManager : MonoBehaviour
     public void RemoveNews(int ID)
     {
         mainPool.Remove(ID);
+        int a= unlockedIDs.Count;
     }
 
     void RandomizeList(List<int> list)
@@ -82,7 +109,8 @@ public class UnlockedNewsManager : MonoBehaviour
 
     void ResetMainPool()
     {
-        mainPool = unlockedIDs;
+        mainPool.Clear();
+        mainPool.AddRange(unlockedIDs);
     }
 
 }
