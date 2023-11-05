@@ -1553,6 +1553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Letter
       objectReference: {fileID: 0}
+    - target: {fileID: 4525686504825394920, guid: 2be39d7d49fba4c4d845247f9f5e5d70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.005
+      objectReference: {fileID: 0}
     - target: {fileID: 8646878576512528218, guid: 2be39d7d49fba4c4d845247f9f5e5d70, type: 3}
       propertyPath: _newspaper
       value: 
