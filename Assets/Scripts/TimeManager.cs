@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
     // Callback definitions
-    public delegate void OnValueChange(float value);
-    public delegate void OnTimeOut();
+    public Action<float> onValueChange;
+    public Action onTimeOut;
 
     // variables
     [SerializeField, Tooltip("In seconds")]
@@ -14,10 +15,6 @@ public class TimeManager : MonoBehaviour
 
     // attributes
     public bool IsPlaying { get => _isPlaying; set => _isPlaying = value; }
-
-    // CallBacks
-    public OnValueChange onValueChange;
-    public OnTimeOut onTimeOut;
 
     private void Start()
     {

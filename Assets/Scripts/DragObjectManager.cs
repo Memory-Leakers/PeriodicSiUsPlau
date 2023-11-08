@@ -8,7 +8,10 @@ public class DragObjectManager : MonoBehaviour
     [SerializeField] private Transform _pictureSelectAreaTopLimit;
     [SerializeField] private Transform _pictureSelectAreaBottomLimit;
 
-    [Space, SerializeField, Tooltip("X: left limit \nY: right limit \nZ: top limit \nW: bottom limit")] private Vector4 _pictureSelectArea;
+    [Space, SerializeField, Tooltip("JUST FOR CHECK \nX: left limit \nY: right limit \nZ: top limit \nW: bottom limit")] 
+    private Vector4 _pictureSelectArea;
+
+    [Space, SerializeField] private Material[] _materials = new Material[3];
 
     private bool _lastAreaCheck = false;
 
@@ -46,5 +49,14 @@ public class DragObjectManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    /// <param name="textures">3 pictures</param>
+    public void SetNewPictures(Texture[] textures)
+    {
+        for(int i = 0; i < _materials.Length; i++)
+        {
+            _materials[i].mainTexture = textures[i];
+        }
     }
 }
