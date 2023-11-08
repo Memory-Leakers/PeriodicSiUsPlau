@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class NewsBehaviour : MonoBehaviour
@@ -9,7 +10,8 @@ public class NewsBehaviour : MonoBehaviour
     private List<Tuple<Sprite, string>> _newsAnswers; // sprite & explanation of each answer
     private int _currentAnswer;
 
-    // private GameManager _gameManager;
+    // private GameManager _gameManager
+    [SerializeField] TMP_Text _newsText; 
 
     public void UpdateNewsData()
     {
@@ -18,6 +20,6 @@ public class NewsBehaviour : MonoBehaviour
 
         // Get new data from GameManager
         // var data = _gameManager.GetNextNews();
+        _newsText.text = _currentNews;
     }
-
 }
