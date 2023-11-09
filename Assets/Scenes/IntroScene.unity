@@ -249,7 +249,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 669, y: 571}
+  m_AnchoredPosition: {x: 883, y: 571}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &205703010
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Peri\xF2dic Si Us Plau"
+  m_text: "Diaris\n Si Us Plau"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 01b879868b3435744b07d55df37a7f05, type: 2}
   m_sharedMaterial: {fileID: 803031015752243644, guid: 01b879868b3435744b07d55df37a7f05, type: 2}
@@ -523,127 +523,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371590812}
-  m_CullTransparentMesh: 1
---- !u!1 &381790330
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 381790331}
-  - component: {fileID: 381790335}
-  - component: {fileID: 381790334}
-  - component: {fileID: 381790333}
-  - component: {fileID: 381790332}
-  m_Layer: 5
-  m_Name: Diario (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &381790331
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381790330}
-  m_LocalRotation: {x: -0.008382328, y: -0.054599684, z: -0.00045837235, w: 0.99847305}
-  m_LocalPosition: {x: 0, y: 0, z: -72}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1408798648}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: -0.962, y: -6.26, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32, y: -529}
-  m_SizeDelta: {x: 3217, y: 2461.4448}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &381790332
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381790330}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 108cfe7ee3648904e8bc4aa95f16b41b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &381790333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381790330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d4c7653d4b137c4bb08c19642e52512, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathPoints:
-  - {fileID: 154694877}
-  - {fileID: 653711333}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  movementSpeed: 0
---- !u!114 &381790334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381790330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b5cb524018654874cbd56cb52a85f6bd, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &381790335
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381790330}
   m_CullTransparentMesh: 1
 --- !u!1 &413769213
 GameObject:
@@ -815,7 +694,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612258643}
   m_LocalRotation: {x: -0.02306468, y: -0.050194804, z: 0.2739056, w: 0.9601689}
-  m_LocalPosition: {x: 0, y: 0, z: 69}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.14999999, z: 0.14999996}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -891,7 +770,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645410794}
   m_LocalRotation: {x: -0.02306468, y: -0.050194804, z: 0.2739056, w: 0.9601689}
-  m_LocalPosition: {x: 0, y: 0, z: 227}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.14999999, z: 0.14999996}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -988,7 +867,7 @@ GameObject:
   - component: {fileID: 822834084}
   - component: {fileID: 822834086}
   - component: {fileID: 822834085}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Diario (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1003,7 +882,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822834083}
   m_LocalRotation: {x: -0.02306468, y: -0.050194804, z: 0.2739056, w: 0.9601689}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.14999999, z: 0.14999996}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1079,7 +958,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962555742}
   m_LocalRotation: {x: -0.02306468, y: -0.050194804, z: 0.2739056, w: 0.9601689}
-  m_LocalPosition: {x: 0, y: 0, z: 171}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.14999999, z: 0.14999996}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1263,7 +1142,7 @@ MonoBehaviour:
   pathPoints:
   - {fileID: 154694877}
   - {fileID: 653711333}
-  movementSpeed: 600
+  movementSpeed: 0.3
 --- !u!1 &1091523401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,7 +1154,7 @@ GameObject:
   - component: {fileID: 1091523402}
   - component: {fileID: 1091523404}
   - component: {fileID: 1091523403}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Diario (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1290,7 +1169,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091523401}
   m_LocalRotation: {x: -0.02306468, y: -0.050194804, z: 0.2739056, w: 0.9601689}
-  m_LocalPosition: {x: 0, y: 0, z: 157}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.14999999, z: 0.14999996}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1445,7 +1324,7 @@ GameObject:
   - component: {fileID: 1236581883}
   - component: {fileID: 1236581885}
   - component: {fileID: 1236581884}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Diario (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1460,7 +1339,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236581882}
   m_LocalRotation: {x: -0.02306468, y: -0.050194804, z: 0.2739056, w: 0.9601689}
-  m_LocalPosition: {x: 0, y: 0, z: 157}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.14999999, z: 0.14999996}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1616,7 +1495,7 @@ Canvas:
   m_GameObject: {fileID: 1408798644}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1418035065}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1647,7 +1526,6 @@ RectTransform:
   - {fileID: 154638617}
   - {fileID: 1853895421}
   - {fileID: 1283062682}
-  - {fileID: 381790331}
   - {fileID: 1491136229}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1742,7 +1620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418035063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 18.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1775,7 +1653,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441287906}
   m_LocalRotation: {x: -0.02306468, y: -0.050194804, z: 0.2739056, w: 0.9601689}
-  m_LocalPosition: {x: 0, y: 0, z: 171}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.14999999, z: 0.14999996}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1885,7 +1763,7 @@ MonoBehaviour:
   pathPoints:
   - {fileID: 154694877}
   - {fileID: 653711333}
-  movementSpeed: 600
+  movementSpeed: 0.3
 --- !u!1 &1503187991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,7 +1775,7 @@ GameObject:
   - component: {fileID: 1503187992}
   - component: {fileID: 1503187994}
   - component: {fileID: 1503187993}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Diario (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1912,7 +1790,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503187991}
   m_LocalRotation: {x: -0.02306468, y: -0.050194804, z: 0.2739056, w: 0.9601689}
-  m_LocalPosition: {x: 0, y: 0, z: 157}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.14999999, z: 0.14999996}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1973,7 +1851,7 @@ GameObject:
   - component: {fileID: 1792763235}
   - component: {fileID: 1792763237}
   - component: {fileID: 1792763236}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Diario (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1988,7 +1866,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792763234}
   m_LocalRotation: {x: -0.02306468, y: -0.050194804, z: 0.2739056, w: 0.9601689}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.14999999, z: 0.14999996}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2187,7 +2065,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858521613}
   m_LocalRotation: {x: -0.02306468, y: -0.050194804, z: 0.2739056, w: 0.9601689}
-  m_LocalPosition: {x: 0, y: 0, z: 171}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.14999999, z: 0.14999996}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2263,7 +2141,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023245807}
   m_LocalRotation: {x: -0.02306468, y: -0.050194804, z: 0.2739056, w: 0.9601689}
-  m_LocalPosition: {x: 0, y: 0, z: 69}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.14999999, z: 0.14999996}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2415,7 +2293,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029350984}
   m_LocalRotation: {x: -0.02306468, y: -0.050194804, z: 0.2739056, w: 0.9601689}
-  m_LocalPosition: {x: 0, y: 0, z: 69}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.14999999, z: 0.14999996}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2476,7 +2354,7 @@ GameObject:
   - component: {fileID: 2078628256}
   - component: {fileID: 2078628258}
   - component: {fileID: 2078628257}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Diario (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2491,7 +2369,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078628255}
   m_LocalRotation: {x: -0.02306468, y: -0.050194804, z: 0.2739056, w: 0.9601689}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.14999999, z: 0.14999996}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2567,7 +2445,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083737048}
   m_LocalRotation: {x: -0.02306468, y: -0.050194804, z: 0.2739056, w: 0.9601689}
-  m_LocalPosition: {x: 0, y: 0, z: 69}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.14999999, z: 0.14999996}
   m_ConstrainProportionsScale: 1
   m_Children: []
