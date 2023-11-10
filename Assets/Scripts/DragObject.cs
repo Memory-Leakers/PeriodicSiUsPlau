@@ -4,8 +4,6 @@ public class DragObject : MonoBehaviour
 {
     private Vector3 _offset;
 
-    private float _zCoord;
-
     private bool _picked = false;
 
     private bool _inSelectArea = false;
@@ -34,9 +32,8 @@ public class DragObject : MonoBehaviour
         if (!_interactible)
             return;
 
+        // pick immediadly
         transform.position = new(transform.position.x, _Ypos.x, transform.position.z);
-
-        _zCoord = Camera.main.WorldToScreenPoint(transform.position).z;
 
         _offset = transform.position - GetMouseWorldPos();
 
@@ -54,10 +51,10 @@ public class DragObject : MonoBehaviour
     }
 
     private Vector3 GetMouseWorldPos()
-    {
+    {       
         Vector3 mousePoint = Input.mousePosition;
 
-        mousePoint.z = _zCoord;
+        mousePoint.z = Camera.main.WorldToScreenPoint(transform.position).z;
 
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
