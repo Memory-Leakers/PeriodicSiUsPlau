@@ -29,11 +29,6 @@ public class CandleController : MonoBehaviour
         _skinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
     }
 
-    private void Update()
-    {
-        OnValueChange(_value);
-    }
-
     private void OnValueChange(float value)
     {
         Value = value;
