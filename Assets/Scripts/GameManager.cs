@@ -10,13 +10,15 @@ public class GameManager : MonoBehaviour
     public int newsPerGame = 10;
 
 
-    int currentNewsIndex = 0;
+    int currentNewsIndex = -1;
     [SerializeField]
     List<int> unusedNews;
 
     UnlockedNewsManager newsManager;
 
     NewsReader.NewsInfo currentNewsInfo;
+
+    NewsBehaviour newsBehaviour;
 
     private void Awake()
     {
@@ -28,8 +30,9 @@ public class GameManager : MonoBehaviour
     {
         // Done on Start instead of Awake becouse we need UnlockedNewsManager awake to happen before this.
         ResetUnusedNews();
-        // DEBUG-------------------------------
-        NextNews(false);
+
+        newsBehaviour = FindObjectOfType<NewsBehaviour>();
+        newsBehaviour.UpdateNewsData();
 
     }
 
@@ -53,13 +56,8 @@ public class GameManager : MonoBehaviour
         }
 
         // Do the process of selecting the next news.
-        //currentNewsInfo = NewsReader.LoadNews(unusedNews[++currentNewsIndex]);
-        // DEBUG------------------------------------------------------------
-        currentNewsInfo = new NewsReader.NewsInfo();
-        currentNewsInfo.indexActivated = new int[3] { Random.Range(31,100), Random.Range(31, 100), Random.Range(31, 100) };
-        currentNewsInfo.id = unusedNews[currentNewsIndex++];
+        currentNewsInfo = NewsReader.LoadNews(unusedNews[++currentNewsIndex]+1);
 
-        // ---------------------------------------------------------------
         return currentNewsInfo;
     }
     

@@ -1,0 +1,21 @@
+{
+	
+	"id": 1,
+	"sprite" : [],
+	"spritePreLoad" : 
+	[
+		"1b",
+		"1d",
+		"1a"
+	],
+	"result" : 2,
+	"text" : "HOLA QUE TAL HOMIE4",
+	"explanations" :
+	[
+		"Aquesta no es",
+		"Aquesta si",
+		"Aquesta no ho es tampoc"
+	],
+	"indexActivated" : []
+	
+}

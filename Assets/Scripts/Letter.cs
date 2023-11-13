@@ -6,16 +6,17 @@ using UnityEngine;
 public class Letter : MonoBehaviour
 {
     [SerializeField] private Newspaper _newspaper;
-    [SerializeField] private GameManager _gameManager;
 
     [SerializeField] private Material _picture;
     [SerializeField] private TextMeshPro _text;
     
     private Animator _animator;
+    private GameManager _gameManager;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _gameManager = FindObjectOfType<GameManager>();
     }
 
     void Start()
@@ -25,16 +26,6 @@ public class Letter : MonoBehaviour
 
     void Update()
     {
-        //Just for testing
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            Send();
-        }
-
-        if (Input.GetKeyUp(KeyCode.T))
-        {
-            Receive();
-        }
     }
 
     void UpdateLetter(string text, int value, Texture texture)
@@ -45,6 +36,7 @@ public class Letter : MonoBehaviour
         _gameManager.AddScore(value);
     }
 
+    [ContextMenu("Send")]
     public void Send()
     {
         _animator.SetTrigger("LetterOut");
@@ -52,6 +44,7 @@ public class Letter : MonoBehaviour
         _newspaper.Receive();
     }
 
+    [ContextMenu("Receive")]
     public void Receive()
     {
         _animator.SetTrigger("LetterIn");

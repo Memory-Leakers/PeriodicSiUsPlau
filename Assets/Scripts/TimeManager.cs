@@ -15,6 +15,7 @@ public class TimeManager : MonoBehaviour
 
     // attributes
     public bool IsPlaying { get => _isPlaying; set => _isPlaying = value; }
+    public float MaxTime { get => _maxTime; }
 
     private void Start()
     {
@@ -29,7 +30,7 @@ public class TimeManager : MonoBehaviour
         _currentTime += Time.deltaTime;
 
         if (onValueChange != null)
-            onValueChange.Invoke(1);
+            onValueChange.Invoke(_currentTime);
 
         if (_currentTime >= _maxTime && onTimeOut != null) 
             onTimeOut.Invoke();

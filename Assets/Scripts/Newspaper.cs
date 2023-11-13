@@ -15,23 +15,11 @@ public class Newspaper : MonoBehaviour
 
     void Start()
     {
-        //_newsBehaviour = gameObject.GetComponent<NewsBehaviour>();        
+        _newsBehaviour = gameObject.GetComponent<NewsBehaviour>();        
     }
 
-    void Update()
-    {
-        //Just for testing
-        if(Input.GetKeyUp(KeyCode.S))
-        {
-            Send();
-        }
 
-        if(Input.GetKeyUp(KeyCode.R))
-        {
-            Receive();
-        }
-    }
-
+    [ContextMenu("Send")]
     public void Send()
     {
         _animator.SetTrigger("NewspaperOut");
@@ -39,6 +27,7 @@ public class Newspaper : MonoBehaviour
         //_newsBehaviour.GetNextNews();
     }
 
+    [ContextMenu("Recieve")]
     public void Receive ()
     {
         _animator.SetTrigger("NewspaperIn");

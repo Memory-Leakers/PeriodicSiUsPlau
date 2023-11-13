@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class CandleController : MonoBehaviour
 {
-    [SerializeField] private TimeManager _timeManager;
-
     [SerializeField, Range(0f, 1.0f), Tooltip("In seconds")]
     private float _value = 0.0f;
     [SerializeField, Tooltip("In local position \nX: Top \nY: Buttom")]
@@ -12,6 +10,8 @@ public class CandleController : MonoBehaviour
     [SerializeField] private Transform _firePivotTrans;
     [SerializeField] private ParticleSystem _firePrticle;
     private SkinnedMeshRenderer _skinnedMeshRenderer;
+    private TimeManager _timeManager;
+
     public float Value
     {
         get => _value;
@@ -20,6 +20,7 @@ public class CandleController : MonoBehaviour
 
     void Start()
     {
+        _timeManager = FindObjectOfType<TimeManager>();
         if (_timeManager != null)
         {
             _timeManager.onValueChange += OnValueChange;
@@ -31,18 +32,23 @@ public class CandleController : MonoBehaviour
 
     private void OnValueChange(float value)
     {
-        Value = value;
+        Value = CalculateCandleRatioValue(_timeManager.MaxTime, value);
 
         _firePivotTrans.localPosition= new
             (_firePivotTrans.localPosition.x,
-            _fireHeight.x - (_fireHeight.x - _fireHeight.y) * value,
+            _fireHeight.x - (_fireHeight.x - _fireHeight.y) * Value,
             _firePivotTrans.localPosition.z);
 
-        _skinnedMeshRenderer.SetBlendShapeWeight(0, value * 100);
+        _skinnedMeshRenderer.SetBlendShapeWeight(0, Value * 100);
     }
 
     private void OnTimeOut()
     {
 
+    }
+
+    private float CalculateCandleRatioValue(float totalTime, float currentTime)
+    {
+        return currentTime / totalTime;
     }
 }
