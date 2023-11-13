@@ -15,6 +15,8 @@ public class DragObjectManager : MonoBehaviour
 
     private bool _lastAreaCheck = false;
 
+    public bool selected = false;
+
     public Action onPictureEnter;
 
     public Action onPictureExit;
