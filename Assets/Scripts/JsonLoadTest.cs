@@ -15,7 +15,7 @@ public class JsonLoadTest : MonoBehaviour
     void Start()
     {
 
-        NewsInfo = NewsReader.LoadNews(1);
+        NewsInfo = NewsReader.LoadNews(5);
 
         Debug.Log(NewsInfo.id);
         Debug.Log(NewsInfo.text);
@@ -23,10 +23,10 @@ public class JsonLoadTest : MonoBehaviour
         {
             Debug.Log(NewsInfo.explanations[i]);
         }
-        Debug.Log(NewsInfo.sprite[1].name);
-        _image.sprite = NewsInfo.sprite[1];
+        Debug.Log(NewsInfo.sprite[0].name);
+        _image.sprite = NewsInfo.sprite[0];
 
-        go.GetComponent<Renderer>().material.SetTexture("_MainTex", NewsInfo.sprite[1].texture);
+        go.GetComponent<Renderer>().material.SetTexture("_MainTex", NewsInfo.sprite[0].texture);
     }
 
     // Update is called once per frame

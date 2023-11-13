@@ -1,0 +1,20 @@
+{
+
+	"id": 7,
+	"sprite": [],
+	"spritePreLoad": [
+		"7a",
+		"7b",
+		"7c"
+	],
+	"result": 1,
+	"title": "Desxifrant els Secrets de l'Artefacte Submarí",
+	"text": "Després de setmanes intensives d'anàlisis i investigacions meticuloses, els científics finalment han revelat alguns dels secrets que envolten l'enigmàtic artefacte submarí. Es confirma que es tracta dels restes d'una antiga nau submergida, els dissenys i característiques de la qual apunten a una civilització que va prosperar fa mil·lennis a les profunditats de l'oceà. Els jeroglífics tallats en les parets de l'artefacte han deixat perplexos els experts, ja que indiquen una forma avançada de comunicació i tecnologia per a la seva època. S'especula que aquest descobriment podria arrojar llum sobre antigues formes de vida marina i els seus assoliments tecnològics, plantejant preguntes fascinants sobre la història submergida del nostre planeta.",
+	"explanations": [
+		"Això es una representació de la civilització.",
+		"Això es una tribu",
+		"Això son astronautes."
+	],
+	"indexActivated": [ 0, 1, 2 ]
+
+}
