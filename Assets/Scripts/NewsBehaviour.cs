@@ -7,7 +7,7 @@ public class NewsBehaviour : MonoBehaviour
 {
     // News datas
     private string _currentNews;
-    private List<Tuple<Sprite, string>> _newsAnswers; // sprite & explanation of each answer
+    private Dictionary<Sprite, string> _newsAnswers; // sprite & explanation of each answer
     private int _currentAnswer;
 
     // private GameManager _gameManager
