@@ -24,15 +24,13 @@ public class DragObjectCreditos : MonoBehaviour
     private void Start()
     {
         initialPos = transform.position;
+        
     }
 
     private void OnMouseDown()
     {
         if (!_interactible)
             return;
-
-        // pick immediadly
-        transform.position = new(transform.position.x, _Ypos.x, transform.position.z);
 
         _offset = transform.position - GetMouseWorldPos();
 

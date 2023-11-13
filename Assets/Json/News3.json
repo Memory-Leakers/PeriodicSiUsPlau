@@ -1,21 +1,20 @@
 {
-	
-	"id": 1,
-	"sprite" : [],
-	"spritePreLoad" : 
-	[
-		"1b",
-		"1d",
-		"1a"
+
+	"id": 3,
+	"sprite": [],
+	"spritePreLoad": [
+		"3a",
+		"3b",
+		"3c"
 	],
-	"result" : 2,
-	"text" : "HOLA QUE TAL HOMIE3",
-	"explanations" :
-	[
-		"Aquesta no es",
-		"Aquesta si",
-		"Aquesta no ho es tampoc"
+	"result": 0,
+	"title": "Ciutat flotant a l'espai: un projecte visionari desperta la imaginació",
+	"text": "Un equip d'innovadors arquitectes i visionaris científics ha revelat els detalls emocionants d'un projecte revolucionari: la construcció d'una espectacular Ciutat Celestial en l'espai sideral. Aquesta audaç iniciativa no només redefineix els límits de la arquitectura i la ciència, sinó que també planteja un futur visionari per a la vida humana més enllà dels confins terrestres.La Ciutat Celestial està concebuda com un hàbitat autosuficient que aprofitarà les condicions úniques de l'espai per oferir una experiència de vida absolutament inigualable. Amb la gravetat zero com a aliada, els habitants d'aquesta ciutat flotant experimentaran una nova dimensió de la vida quotidiana, des de la forma en què es mouen fins a com interactuen amb l'entorn que els envolta.",
+	"explanations": [
+		"Això es la ciutat celestial proposada pels arquitectes.",
+		"Això es l'estació internacional",
+		"Això es Santorini, Grècia."
 	],
-	"indexActivated" : []
-	
+	"indexActivated": [ 0, 1, 2 ]
+
 }

@@ -5030,7 +5030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbc098b724303b4c83dc3eae4d1e41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstNews: 5
+  firstNews: 2
 --- !u!114 &213550269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5281,17 +5281,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<b>\"Rey Salvaje: Descubriendo las Asombrosas Caracter\xEDsticas y la
-    Vida Social de los Lobos\"</b>\r\n\r\n\"Los lobos, como \xE9lites del mundo animal
-    salvaje, poseen numerosas y asombrosas caracter\xEDsticas. Sus aullidos no solo
-    se utilizan para comunicarse, sino tambi\xE9n para delimitar su territorio, siendo
-    sorprendente que este sonido se pueda escuchar a una distancia de hasta 10 kil\xF3metros.
-    Durante la caza, los lobos muestran una velocidad impresionante, con una velocidad
-    m\xE1xima de hasta 65 km/h, convirti\xE9ndolos en cazadores \xE1giles y estrat\xE9gicos.
-    La vida social de la manada de lobos tambi\xE9n es notable, con una estructura
-    social compleja y roles definidos que garantizan la cooperaci\xF3n y el bienestar
-    del grupo, demostrando su excelente inteligencia y capacidad de adaptaci\xF3n
-    en su entorno natural.\"\r\n"
+  m_text: "La Ciutat Celestial est\xE0 concebuda com un h\xE0bitat autosuficient
+    que aprofitar\xE0 les condicions \xFAniques de l'espai per oferir una experi\xE8ncia
+    de vida absolutament inigualable. Amb la gravetat zero com a aliada, els habitants
+    d'aquesta ciutat flotant experimentaran una nova dimensi\xF3 de la vida quotidiana,
+    des de la forma en qu\xE8 es mouen fins a com interactuen amb l'entorn que els
+    envolta.\","
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 01b879868b3435744b07d55df37a7f05, type: 2}
   m_sharedMaterial: {fileID: 803031015752243644, guid: 01b879868b3435744b07d55df37a7f05, type: 2}
@@ -6879,6 +6874,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 90d63bed3be901d499c3c93d969d423f, type: 2}
   - {fileID: 2100000, guid: 30fd06c37b3ecc14ebf0b49aacef4152, type: 2}
   - {fileID: 2100000, guid: 00afd71c2ef4d734683ec8a7129bdf0d, type: 2}
+  selected: 0
 --- !u!4 &1807862870
 Transform:
   m_ObjectHideFlags: 0

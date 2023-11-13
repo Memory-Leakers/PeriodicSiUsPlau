@@ -1,21 +1,20 @@
 {
-	
-	"id": 1,
-	"sprite" : [],
-	"spritePreLoad" : 
-	[
-		"1b",
-		"1d",
-		"1a"
+
+	"id": 4,
+	"sprite": [],
+	"spritePreLoad": [
+		"4a",
+		"4b",
+		"4c"
 	],
-	"result" : 2,
-	"text" : "HOLA QUE TAL HOMIE4",
-	"explanations" :
-	[
-		"Aquesta no es",
-		"Aquesta si",
-		"Aquesta no ho es tampoc"
+	"result": 1,
+	"title": "Descobreixen nova espècie de planta luminiscent a la selva amazònica",
+	"text": "En una expedició recent a la selva amazònica, intrèpids científics han fet l'extraordinària descoberta d'una nova espècie de planta que emet una llum suau i colorida durant la nit. La planta, batejada com a Luminiflora Amazonensis, promet tenir aplicacions destacades en il·luminació ecològica i estudis de biodiversitat. Aquest recent descobriment no només revela la meravellosa diversitat de la flora amazònica, sinó que també obre la porta a noves possibilitats en els àmbits de la sostenibilitat i la recerca biològica.La Luminiflora Amazonensis, com ha estat carinyosament anomenada, desperta la fascinació de la comunitat científica pel seu fenomen luminescent únic. Amb la seva capacitat d'emetre una llum suau i multicolor durant les hores nocturnes, aquesta planta no només captura l'atenció dels científics, sinó que també planteja interrogants sobre el seu possible impacte en la il·luminació ecològica.",
+	"explanations": [
+		"Això es Marihuana.",
+		"Això es la Luminiflora Amazonensis",
+		"Això es una Orquídea."
 	],
-	"indexActivated" : []
-	
+	"indexActivated": [ 0, 1, 2 ]
+
 }

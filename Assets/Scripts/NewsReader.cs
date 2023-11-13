@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-
-
-
+using System.Text;
 
 public static class NewsReader
 {
@@ -16,6 +14,7 @@ public static class NewsReader
         public Sprite[] sprite;
         public string[] spritePreLoad;
         public int result;
+        public string title;
         public string text;
         public string[] explanations;
         public int[] indexActivated;
@@ -68,11 +67,11 @@ public static class NewsReader
         return currentInfo;
     }
     private static void SaveInfoIntoCurrentInfo(NewsInfo NewsTobeLoaded)
-    {
-        
+    {   
         currentInfo.id = NewsTobeLoaded.id;
         currentInfo.sprite = NewsTobeLoaded.sprite;
         currentInfo.spritePreLoad = NewsTobeLoaded.spritePreLoad;
+        currentInfo.title = NewsTobeLoaded.title;
         currentInfo.text = NewsTobeLoaded.text;
         currentInfo.explanations = NewsTobeLoaded.explanations;
         currentInfo.result = NewsTobeLoaded.result;
@@ -82,3 +81,8 @@ public static class NewsReader
     
 }
 
+//string temp = json;
+
+//byte[] bytes = Encoding.UTF32.GetBytes(temp);
+//temp = Encoding.UTF32.GetString(bytes);
+//json = temp;

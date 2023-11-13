@@ -1,21 +1,20 @@
 {
-	
-	"id": 1,
-	"sprite" : [],
-	"spritePreLoad" : 
-	[
-		"1b",
-		"1d",
-		"1a"
+
+	"id": 2,
+	"sprite": [],
+	"spritePreLoad": [
+		"2a",
+		"2b",
+		"2c"
 	],
-	"result" : 2,
-	"text" : "HOLA QUE TAL HOMIE2",
-	"explanations" :
-	[
-		"Aquesta no es",
-		"Aquesta si",
-		"Aquesta no ho es tampoc"
+	"result": 1,
+	"title": "Inventor local crea màquina que converteix residus plàstics en energia renovable",
+	"text": "Un enginyós inventor local ha desenvolupat una màquina revolucionària que converteix residus plàstics en energia renovable. La màquina, anomenada PlastiPower,ha cridat l'atenció d'experts en sostenibilitat i podria oferir una solució innovadora per combatre la contaminació per plàstics.",
+	"explanations": [
+		"Això es una central nuclear.",
+		"Això es la màquina PlastiPower.",
+		"Això es una central elèctrica."
 	],
-	"indexActivated" : []
-	
+	"indexActivated": [ 0, 1, 2 ]
+
 }
