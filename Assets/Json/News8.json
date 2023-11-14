@@ -1,0 +1,20 @@
+{
+
+	"id": 8,
+	"sprite": [],
+	"spritePreLoad": [
+		"8a",
+		"8b",
+		"8c"
+	],
+	"result": 0,
+	"title": "Llançament Exitós del Primer Hotel Espacial: Una Nova Era en el Turisme Còsmic",
+	"text": "Avançant cap a una nova era de viatges espacials, es va dur a terme amb èxit el llançament del primer hotel espacial, conegut com a Galactic Haven Aquesta innovadora iniciativa ha marcat un hito històric en el turisme còsmic i ha captivat l'atenció del món sencer. El Galactic Haven és una estació espacial convertida en un luxós hotel que ofereix vistes espectaculars de la Terra des de l'òrbita baixa. Equipat amb tecnologia de gravetat artificial, els hostes poden gaudir d'una experiència sense precedents flotant lliurement a l'interior de l'estació, experimentant la sensació única de la microgravetat. Amb habitacions amb vistes a l'espai, restaurants amb plats inspirats en la cuina internacional i activitats recreatives sense precedents, aquest hotel espacial està establint noves normes per al turisme extraterrestre. Les agències de viatges ja han començat a oferir paquets per als aventurers que desitgen viure una experiència fora d'aquest món.",
+	"explanations": [
+		"Això es el Galactic Haven.",
+		"Això es un projecte d'hotel a la jungla per part d'un Arquitecte",
+		"Això es el coet Saturn V, el qual va portar el primer home a la lluna."
+	],
+	"indexActivated": [ 0, 1, 2 ]
+
+}
