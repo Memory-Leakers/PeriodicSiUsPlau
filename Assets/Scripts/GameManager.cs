@@ -20,10 +20,13 @@ public class GameManager : MonoBehaviour
 
     NewsBehaviour newsBehaviour;
 
+    
+
     private void Awake()
     {
         newsManager = FindObjectOfType<UnlockedNewsManager>();
         score = FindObjectOfType<ScoreManager>();
+        
     }
 
     private void Start()
@@ -74,6 +77,8 @@ public class GameManager : MonoBehaviour
     void ResetUnusedNews()
     {
         unusedNews = newsManager.GetGameNews(newsPerGame);
+
+        Debug.Log(unusedNews.Count);
     }
 
     [ContextMenu("Correct")]

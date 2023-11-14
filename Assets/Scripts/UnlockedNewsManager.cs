@@ -67,6 +67,7 @@ public class UnlockedNewsManager : MonoBehaviour
             // If we are asking for more news than we have in mainPool
             // Get last few news, reset the pool and complete the needed amount with random non-duplicated news-
             gameNews = mainPool;
+
             ResetMainPool();
             RandomizeList(gameNews);
             int neededAmount = amount - gameNews.Count;

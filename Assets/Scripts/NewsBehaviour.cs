@@ -12,15 +12,19 @@ public class NewsBehaviour : MonoBehaviour
 
     // private GameManager _gameManager
     [SerializeField] TMP_Text _newsText;
+    [SerializeField] TMP_Text _titleText;
     GameManager _gameManager;
     Letter letter;
     NewsReader.NewsInfo info;
     bool hasInfo = false;
+    DragObjectManager dragObjectManager;
+    Texture[] newsInfoText;
 
     private void Awake()
     {
         _gameManager = FindObjectOfType<GameManager>();
         letter = FindObjectOfType<Letter>();
+        dragObjectManager = FindObjectOfType<DragObjectManager>();
     }
 
     public void UpdateNewsData()
@@ -38,7 +42,17 @@ public class NewsBehaviour : MonoBehaviour
         hasInfo = true;
         _currentAnswer = 0;
 
+        newsInfoText = new Texture[info.sprite.Length];
+
+        for (int i = 0; i < info.sprite.Length; i++)
+        {
+            newsInfoText[i] = info.sprite[i].texture;
+        }
+
+        dragObjectManager.SetNewPictures(newsInfoText);
+
         _newsText.text = info.text;
+        _titleText.text = info.title;
 
     }
 }
