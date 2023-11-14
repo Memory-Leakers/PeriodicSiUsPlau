@@ -23,7 +23,7 @@ public class Newspaper : MonoBehaviour
     public void Send()
     {
         _animator.SetTrigger("NewspaperOut");
-        _newsBehaviour.UpdateNewsData();
+
         //_newsBehaviour.GetNextNews();
     }
 
