@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Chen.unity
+    guid: c2bdeab8714a3f045aaf0b9f56c4a33e
   m_configObjects: {}
