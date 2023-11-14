@@ -55,6 +55,11 @@ public class GameManager : MonoBehaviour
                 newsManager.UnlockNews(unlockedNews);
         }
 
+        if (currentNewsIndex == unusedNews.Count-1)
+        {
+            // We finish the game because we did all the news.
+        }
+
         // Do the process of selecting the next news.
         currentNewsInfo = NewsReader.LoadNews(unusedNews[++currentNewsIndex]+1);
 

@@ -1,0 +1,20 @@
+{
+
+	"id": 9,
+	"sprite": [],
+	"spritePreLoad": [
+		"9a",
+		"9b",
+		"9c"
+	],
+	"result": 2,
+	"title": "Descobriment d'Antigues Estàtues al Situ Arqueològic de Göbekli Tepe",
+	"text": "Al lloc arqueològic de Göbekli Tepe, al sud-est de Turquia, els arqueòlegs han fet un descobriment emocionant: una col·lecció d'estàtues que daten de fa més de 11,000 anys. Aquest lloc, conegut pels seus monumentals pilars de pedra i considerat un dels llocs de culte més antics del món, continua revelant secrets sobre les civilitzacions prehistòriques. Les estàtues, esculpides en calcària, representen figures humanes i animals, i mostren un nivell impressionant de detall artístic. Els experts creuen que aquestes peces podrien haver tingut un propòsit ritual o religiós, contribuint a la creixent comprensió de les pràctiques culturals de les comunitats que van habitar la regió en aquest període. Aquest descobriment llança nova llum sobre la complexitat de les societats prehistòriques i destaca la importància contínua de Göbekli Tepe com un tresor arqueològic.",
+	"explanations": [
+		"Això son pintures egipcies.",
+		"Això es un cuadre de Velázquez",
+		"Això es la foto sobre les Antigues Estàtues de Göbekli Tepe"
+	],
+	"indexActivated": [ 0, 1, 2 ]
+
+}

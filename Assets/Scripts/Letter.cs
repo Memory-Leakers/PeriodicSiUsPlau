@@ -28,7 +28,7 @@ public class Letter : MonoBehaviour
     {
     }
 
-    void UpdateLetter(string text, int value, Texture texture)
+    public void UpdateLetter(string text, int value, Texture texture)
     {
         _text.text = text;
         _picture.SetTexture(0, texture);
