@@ -5,7 +5,7 @@ using UnityEngine;
 public class UnlockedNewsManager : MonoBehaviour
 {
     [SerializeField]
-    int firstNews = 10;
+    int firstNews = 9;
 
     static List<int> unlockedIDs = new List<int>();
 
@@ -16,7 +16,7 @@ public class UnlockedNewsManager : MonoBehaviour
         // Add IDs for first X news (0 to firstNews)
         if (unlockedIDs.Count == 0)
         {
-            for (int i = 0; i < firstNews; ++i)
+            for (int i = 1; i <= firstNews; ++i)
                 unlockedIDs.Add(i);
         }
         ResetMainPool();
@@ -67,7 +67,7 @@ public class UnlockedNewsManager : MonoBehaviour
             // If we are asking for more news than we have in mainPool
             // Get last few news, reset the pool and complete the needed amount with random non-duplicated news-
             gameNews = mainPool;
-
+            
             ResetMainPool();
             RandomizeList(gameNews);
             int neededAmount = amount - gameNews.Count;
@@ -86,6 +86,12 @@ public class UnlockedNewsManager : MonoBehaviour
             gameNews = mainPool;
             RandomizeList(gameNews);
         }
+        Debug.Log("Amount");
+        Debug.Log(amount);
+
+        var i = gameNews.GetRange(0, amount);
+        Debug.Log("Longitud List");
+        Debug.Log(i.Count);
 
         return gameNews.GetRange(0,amount);
     }

@@ -21,6 +21,8 @@ public class DragObjectManager : MonoBehaviour
 
     public Action onPictureExit;
 
+    public Action onReset;
+
     void Start()
     {
         _pictureSelectArea.x = _pictureSelectAreaLeftLimit.position.x;
@@ -60,5 +62,13 @@ public class DragObjectManager : MonoBehaviour
         {
             _materials[i].mainTexture = textures[i];
         }
+    }
+
+    public void ResetPictures() 
+    {
+        onPictureExit?.Invoke();
+        onReset?.Invoke();
+        
+        selected = false;
     }
 }

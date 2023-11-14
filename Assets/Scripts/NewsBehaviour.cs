@@ -13,6 +13,8 @@ public class NewsBehaviour : MonoBehaviour
     // private GameManager _gameManager
     [SerializeField] TMP_Text _newsText;
     [SerializeField] TMP_Text _titleText;
+    [SerializeField] Transform[] pictures;
+    Vector3[] picturesPosInStart;
     GameManager _gameManager;
     Letter letter;
     NewsReader.NewsInfo info;
@@ -25,6 +27,13 @@ public class NewsBehaviour : MonoBehaviour
         _gameManager = FindObjectOfType<GameManager>();
         letter = FindObjectOfType<Letter>();
         dragObjectManager = FindObjectOfType<DragObjectManager>();
+
+        picturesPosInStart = new Vector3[pictures.Length];
+
+        for (int i = 0; i < pictures.Length; i++)
+        {
+            picturesPosInStart[i] = pictures[i].localPosition;
+        }
     }
 
     public void UpdateNewsData()
@@ -54,5 +63,15 @@ public class NewsBehaviour : MonoBehaviour
         _newsText.text = info.text;
         _titleText.text = info.title;
 
+    }
+
+    public void ReceiveNews()
+    {
+        for (int i = 0; i < pictures.Length; i++)
+        {
+            pictures[i].localPosition = picturesPosInStart[i];
+        }
+
+        dragObjectManager.ResetPictures();
     }
 }

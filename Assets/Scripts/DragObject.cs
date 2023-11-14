@@ -27,6 +27,9 @@ public class DragObject : MonoBehaviour
     {
         _manager = GameObject.FindGameObjectWithTag("Picture Manager").GetComponent<DragObjectManager>();
         _pivot = GameObject.FindGameObjectWithTag("Picture Pivot").GetComponent<Transform>();
+
+        _manager.onReset += ResetPictureCallback;
+
     }
 
     private void OnMouseDown()
@@ -74,7 +77,10 @@ public class DragObject : MonoBehaviour
     private void Update()
     {
         if (_picked)
+        {
             transform.position = Vector3.Lerp(transform.position, GetMouseWorldPos() + _offset, _lerpInterval * Time.deltaTime);
+            _inSelectArea = _manager.CheckInArea(new(transform.position.x, transform.position.z));
+        }
         else if (Mathf.Abs(transform.position.y - _Ypos.y) > 0.005) 
         {
             if (!_inSelectArea || (_manager.selected && !_selected))
@@ -89,6 +95,11 @@ public class DragObject : MonoBehaviour
             }
         }
 
-        _inSelectArea = _manager.CheckInArea(new(transform.position.x, transform.position.z));
+        
+    }
+
+    private void ResetPictureCallback()
+    {
+        _selected = false;
     }
 }

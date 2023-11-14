@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     ScoreManager score;
 
     // Current number of news in a game
-    public int newsPerGame = 10;
+    public int newsPerGame = 4;
 
 
-    int currentNewsIndex = -1;
+    int currentNewsIndex = 0;
     [SerializeField]
     List<int> unusedNews;
 
@@ -58,13 +59,16 @@ public class GameManager : MonoBehaviour
                 newsManager.UnlockNews(unlockedNews);
         }
 
-        if (currentNewsIndex == unusedNews.Count-1)
+        if (currentNewsIndex == unusedNews.Count)
         {
             // We finish the game because we did all the news.
+            SceneManager.LoadScene("FinalScene");
         }
+        Debug.Log("INDICE ES");
+        Debug.Log(currentNewsIndex);
 
         // Do the process of selecting the next news.
-        currentNewsInfo = NewsReader.LoadNews(unusedNews[++currentNewsIndex]+1);
+        currentNewsInfo = NewsReader.LoadNews(unusedNews[currentNewsIndex++]);
 
         return currentNewsInfo;
     }

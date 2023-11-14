@@ -3,18 +3,18 @@
 	"id": 7,
 	"sprite": [],
 	"spritePreLoad": [
-		"7a",
-		"7b",
-		"7c"
+		"10a",
+		"10b",
+		"10c"
 	],
 	"result": 0,
-	"title": "Desxifrant els Secrets de l'Artefacte Submarí",
-	"text": "Després de setmanes intensives d'anàlisis i investigacions meticuloses, els científics finalment han revelat alguns dels secrets que envolten l'enigmàtic artefacte submarí. Es confirma que es tracta dels restes d'una antiga nau submergida, els dissenys i característiques de la qual apunten a una civilització que va prosperar fa mil·lennis a les profunditats de l'oceà. Els jeroglífics tallats en les parets de l'artefacte han deixat perplexos els experts, ja que indiquen una forma avançada de comunicació i tecnologia per a la seva època. S'especula que aquest descobriment podria arrojar llum sobre antigues formes de vida marina i els seus assoliments tecnològics, plantejant preguntes fascinants sobre la història submergida del nostre planeta.",
+	"title": "Desenvolupament Sostenible: Ciutat Subterrània Construïda Amb Materials Reciclats",
+	"text": "Un grup d'arquitectes i enginyers ha presentat un projecte innovador per a la construcció d'una ciutat subterrània única utilitzant exclusivament materials reciclats. Aquesta ciutat, anomenada EcoSub, es concep com una solució sostenible per afrontar el creixement urbà i reduir l'impacte ambiental associat a la construcció de ciutats tradicionals. Les parets i estructures de l'EcoSub estan formades per materials reciclats, incloent vidre, plàstic i materials de construcció recuperats. A més, la ciutat subterrània incorpora tecnologies d'energies renovables i sistemes d'aigua reutilitzada per minimitzar el seu impacte ambiental. Els promotors d'aquest projecte esperen que l'EcoSub serveixi com a model per a futures ciutats sostenibles, promocionant la utilització responsable dels recursos i la construcció ambientalment amigable.",
 	"explanations": [
-		"Això es una representació de la civilització.",
-		"Això es una tribu",
-		"Això son astronautes."
+		"Això es la ciutat subterrània EcoSub.",
+		"Això es una imatge del gran mausoleu TajMahal",
+		"Això es una foto sobre el metro de Canadà"
 	],
-	"indexActivated": [ 0, 1, 2 ]
+	"indexActivated": []
 
 }

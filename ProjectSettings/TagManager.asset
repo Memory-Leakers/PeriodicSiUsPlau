@@ -7,6 +7,7 @@ TagManager:
   - Picture
   - Picture Manager
   - Picture Pivot
+  - ChangeScene
   layers:
   - Default
   - TransparentFX

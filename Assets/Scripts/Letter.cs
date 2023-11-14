@@ -31,7 +31,7 @@ public class Letter : MonoBehaviour
     public void UpdateLetter(string text, int value, Texture texture)
     {
         _text.text = text;
-        _picture.SetTexture(0, texture);
+        _picture.SetTexture("_MainTex", texture);
         
         _gameManager.AddScore(value);
     }
